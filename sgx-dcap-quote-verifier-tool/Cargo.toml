@@ -1,10 +1,10 @@
 [package]
-name = "sgx-dcap-quote-verifier"
+name = "sgx-dcap-quote-verifier-tool"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-intel-tee-quote-verification-rs = "0.3.0"
-intel-tee-quote-verification-sys = "0.2.1"
+clap = { version = "4.4.12", features = ["derive"] }
+sgx-dcap-quote-verifier = { path = "../sgx-dcap-quote-verifier" }
