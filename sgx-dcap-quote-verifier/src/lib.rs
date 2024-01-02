@@ -37,7 +37,6 @@ use intel_tee_quote_verification_rs::*;
 pub fn ecdsa_quote_verification(quote: &[u8]) {
     let mut collateral_expiration_status = 1u32;
     let mut quote_verification_result = sgx_ql_qv_result_t::SGX_QL_QV_RESULT_UNSPECIFIED;
-
     let mut supp_data: sgx_ql_qv_supplemental_t = Default::default();
     let mut supp_data_desc = tee_supp_data_descriptor_t {
         major_version: 0,

@@ -1,3 +1,7 @@
 [workspace]
 
-members = ["sgx-dcap-quote-verifier", "sgx-dcap-quote-verifier-tool"]
+members = [
+    "sgx-dcap-quote-verifier",
+    "sgx-dcap-quote-verifier-tool",
+    "sgx-dcap-quote-verifier-service",
+]
