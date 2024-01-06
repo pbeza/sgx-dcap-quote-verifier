@@ -37,7 +37,6 @@ use std::path::PathBuf;
 
 #[derive(Parser)]
 struct Cli {
-    /// Specify quote path
     #[arg(long = "quote")]
     quote_path: PathBuf,
 }
@@ -45,11 +44,10 @@ struct Cli {
 fn main() {
     let args = Cli::parse();
     let quote_path = args.quote_path;
-
     let quote = std::fs::read(&quote_path).expect("Error: Unable to open quote file");
 
     println!(
-        "Info: ECDSA quote path: {}",
+        "ECDSA quote path: {}",
         quote_path.to_str().unwrap_or("Invalid path")
     );
 
